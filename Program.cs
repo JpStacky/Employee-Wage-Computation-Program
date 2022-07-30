@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
             //Call to get attendence
-            DailyWageUC2.getAttendance();
+            PartTimeEmployeeUC3.getAttendance();
         }
     }
 }
