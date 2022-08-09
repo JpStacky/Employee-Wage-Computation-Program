@@ -1,12 +1,19 @@
-﻿namespace EmployeeWageComputationProgram
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace EmployeeWageComputationProgram
 {
     class Program
     {
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Employee Wage Computation Program");
-            //Call to get attendence
-            DailyWageUC2.getAttendance();
+
+            DailyTotalWageUC13 dailyTotalWage = new DailyTotalWageUC13();
+            dailyTotalWage.GetValues();
+            dailyTotalWage.GetAttendance();
+            dailyTotalWage.CalculateWage();
+            dailyTotalWage.DisplayDailyWage();
         }
     }
 }
