@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputationProgram
 {
-    public class EmpWageBuilderUC11 : WageComputeInterfaceUC11
+    public class EmpWageBuilderUC11
     {
         char choice;
         float wage_Per_Hour;
@@ -20,7 +20,12 @@ namespace EmployeeWageComputationProgram
         int work_Hour_Per_Month;
         int count_No_Of_Absent = 0;
 
-
+        public EmpWageBuilderUC11()
+        {
+            CompanyBuilder();
+            GetAttendance();
+            CalculateWage();
+        }
         public void CompanyBuilder()
         {
             //int num = no_Of_Company;
@@ -77,7 +82,7 @@ namespace EmployeeWageComputationProgram
                 }
             }
          }
-        public float CalculateWage()
+        public void CalculateWage()
         {
             float total_Wage = count_Work_Hour * wage_Per_Hour;
             Console.WriteLine("No. of Part Time Days = " + count_Part_Time);
@@ -86,7 +91,6 @@ namespace EmployeeWageComputationProgram
             Console.WriteLine("No. of Days Worked = " + count_Number_Of_Day);
             Console.WriteLine("Total Work Hour = " + count_Work_Hour);
             Console.WriteLine("Monthly Wage is = " + total_Wage);
-            return total_Wage;
         }
     }
 }
